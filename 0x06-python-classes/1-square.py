@@ -1,43 +1,14 @@
 #!/usr/bin/python3
-""" empty class square that defines a square
-"""
+# 0-square.py by Ehoneah Obed
+"""Defines a square """
 
 
 class Square:
-    """ class square"""
-    def __init__(self, width=0, height=0):
-        """ Instantiation with optional width and height"""
-        self.width = width
-        self.height = height
+    """Represents a square"""
 
-    @property
-    def width(self):
-        """ width
+    def __init__(self, size):
+        """Initializing this square class
+        Args: size - represnets the size of the square defined
         """
-        return self.__width
 
-    @property
-    def height(self):
-        """height
-        """
-        return self.__height
-
-    @width.setter
-    def width(self, value):
-        """ width setter
-        """
-        if type(value) is not int:
-            raise TypeError("width must be an integer")
-        if value < 0:
-            raise ValueError("width must be >= 0")
-        self.__width = value
-
-    @height.setter
-    def height(self, value):
-        """ height setter
-        """
-        if type(value) is not int:
-            raise TypeError("height must be an integer")
-        if value < 0:
-            raise ValueError("height must be >= 0")
-        self.__height = value
+        self.__size = size
